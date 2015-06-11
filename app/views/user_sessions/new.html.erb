@@ -1,0 +1,11 @@
+<div class = "container">
+  <div class="wrapper">
+    <%= form_for @user_session, :as => :user_session, :url => { :action => "create" }, :html => {:class => 'form-signin'} do |f| %>
+        <h3 class="form-signin-heading">Welcome Back! Please Sign In</h3>
+        <hr class="colorgraph"><br>
+        <%= f.text_field :email, placeholder: 'Username' , autofocus: "", class: 'form-control' , required: ""%>
+        <%= f.password_field :password, placeholder: 'password', class: 'form-control', required: "" %>
+         <%= f.submit "Login", class:  "btn btn-lg btn-primary btn-block"  %>
+   <% end %>
+  </div>
+</div>
